@@ -14,7 +14,7 @@ public class LoopFun {
         if (number == 0)
             return 1;
 
-        return number*factorial(number-1);
+        return number * factorial(number - 1);
     }
 
     /**
@@ -47,16 +47,24 @@ public class LoopFun {
      * @return the encrypted string by shifting each character by three character
      */
     public String encrypt(String word) {
-        StringBuilder encryptA = new StringBuilder();
-        for (char c : word.toCharArray()) {
-            encryptA.append((char) (c + 3));
-//            if(c == 'z'){
-//                c -= 'z' - 'a';
-//            }
-//            else{c += 1;}
+        String shift = "";
+        for (int i = 0; i < word.length(); i++) {
+            char c = (char) (word.charAt(i) + 3);
+            if (c > 'z')
+                shift = shift + (char) (word.charAt(i) - 23);
+            else {
+                shift = shift + c;//(char) (word.charAt(i) +3);
+            }
         }
-        return encryptA.toString();
+        return shift;
+        }
     }
-}
 
+//        StringBuilder encryptA = new StringBuilder();
+//
+//        for (char c : word.toCharArray()) {
+//            encryptA.append((char) (c + 3));
+//        }
+//        return encryptA.toString();
+// this test fails the wrapping of alphabet.
 

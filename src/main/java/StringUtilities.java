@@ -47,7 +47,7 @@ public class StringUtilities {
             position = word.length() / 2 - 1;   //position of even character word
             length = 2;
         }
-        String result = word.substring(position, position + length);  //.substring..
+        String result = word.substring(position, position + length);  //.substring (position is the middle char. ..
         char character = result.charAt(0);
         return character;
     }
