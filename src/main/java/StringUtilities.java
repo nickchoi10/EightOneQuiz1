@@ -5,7 +5,8 @@ public class StringUtilities {
      * @return `input`
      */
     public String returnInput(String input) {
-        return null;
+
+        return input;
     }
 
     /**
@@ -14,7 +15,8 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
+
+        return baseValue + valueToBeAdded;
     }
 
     /**
@@ -22,7 +24,12 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        return null;
+        String rev = new StringBuilder(valueToBeReversed).reverse().toString();
+        return rev;
+//        input1.append(valueToBeReversed);
+//        input1.reverse(valueToBeReversed);
+//        return valueToBeReversed.toString();
+
     }
 
     /**
@@ -30,7 +37,19 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        int length;
+        int position;
+
+        if (word.length() % 2 == 1) {           //position of odd character words
+            position = word.length() / 2;
+            length = 1;
+        } else {
+            position = word.length() / 2 - 1;   //position of even character word
+            length = 2;
+        }
+        String result = word.substring(position, position + length);  //.substring..
+        char character = result.charAt(0);
+        return character;
     }
 
     /**
@@ -39,14 +58,28 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        return null;
+
+        String removed = value.replace(charToRemove, ' ');
+        String removedSpace = removed.replaceAll("\\s","");
+        return removedSpace;
     }
+//        String result="";
+//        for(int i= 0; i< value.length(); i++){
+//            if(Character.isLetter(value.charAt(i))){
+//               result+=value.charAt(i);
+//            }
+//        }
+//        return result;
+//    }
 
     /**
      * @param sentence String delimited by spaces representative of a sentence
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        //.substring Returns a string that is a substring of this string.
+        // The substring begins with the character at the specified index and extends to the end of this string.
+        String lastWord= sentence.substring(sentence.lastIndexOf(" ")+1);
+        return lastWord;
     }
 }
