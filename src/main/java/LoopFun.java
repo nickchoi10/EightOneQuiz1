@@ -14,8 +14,16 @@ public class LoopFun {
         if (number == 0)
             return 1;
 
-        return number * factorial(number - 1);
+        return number * factorial(number - 1);    //this is a recursion... irl, boss might say they dont like..
     }
+
+    //int f =1;                                 //use this instead...
+    //for (int i =1; i <= number; i++){
+    //f = f *i;}
+    //return f; }
+
+    //for (int i = number; i <0; i--)     // you can do this too like above...
+
 
     /**
      * Given a phrase, get the acronym of that phrase. Acronym is the combination of
@@ -32,6 +40,19 @@ public class LoopFun {
         }
         return initials.toString().toUpperCase(); //toUpperCase function to uppercase the String..
     }                                             // need to .toString, because stringbuilder doesnt return a string..
+
+    // String[] s = phrase.split(" ");
+
+
+
+    //String[] sentense = phrase.split("");
+    //String result = "";
+    // for (string s: sentence) {
+    // result = result + s.charAt(0);}
+    //return result.toUpperCase();}
+
+
+
 
     /**
      * To prevent anyone from reading our messages, we can encrypt it so it will only be readable by its
@@ -60,11 +81,15 @@ public class LoopFun {
         }
     }
 
-//        StringBuilder encryptA = new StringBuilder();
-//
-//        for (char c : word.toCharArray()) {
-//            encryptA.append((char) (c + 3));
-//        }
-//        return encryptA.toString();
-// this test fails the wrapping of alphabet.
 
+// String alphabet = "abcdefghijklmnopqrstuvwxyz"
+// StringBuilder encWord = new StringBuilder();
+// for (int i-0; i <word.length(); i++){
+//int idx = alphabet.indexof(word.charAt(i));
+// idx +=3;
+// idx = idx % 26;
+//encWord.append(alphabet.charAt(idx));
+//}
+//return encWord.toString();
+//}
+//}

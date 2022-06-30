@@ -18,6 +18,7 @@ public class StringUtilities {
 
         return baseValue + valueToBeAdded;
     }
+    // return baseValue.concat(valueToBeAdded);
 
     /**
      * @param valueToBeReversed value to be reversed
@@ -29,8 +30,9 @@ public class StringUtilities {
 //        input1.append(valueToBeReversed);
 //        input1.reverse(valueToBeReversed);
 //        return valueToBeReversed.toString();
-
     }
+
+    //return new StringBuilder(valueToBeReversed).reverse().toString();
 
     /**
      * @param word word to get middle character of
@@ -52,6 +54,10 @@ public class StringUtilities {
         return character;
     }
 
+    // return word.charAt(word.length()/2);
+
+
+
     /**
      * @param value value to have character removed from
      * @param charToRemove character to be removed from `value`
@@ -63,6 +69,11 @@ public class StringUtilities {
         String removedSpace = removed.replaceAll("\\s","");
         return removedSpace;
     }
+    // String s = value.replaceAll(String.valueOf(charToRemove,"");
+    //return s;
+
+    //return  value.replaceAll(String.valueOf(charToRemove), "");
+
 //        String result="";
 //        for(int i= 0; i< value.length(); i++){
 //            if(Character.isLetter(value.charAt(i))){
@@ -83,3 +94,9 @@ public class StringUtilities {
         return lastWord;
     }
 }
+
+//String[] sarr = sentence.split(" ");
+// return sarr[sarr.length-1];
+
+//ArrayList<String> s = new ArrayList<>(sentence.split(" "));
+// return s.get(s.size()-1);
